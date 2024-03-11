@@ -2,6 +2,10 @@ const  Datatypes = require('sequelize')
 const sequelize = require('../config/db');
 const Product = require('./productModel');
 const DynamicProperties=sequelize.define({
+    propery_id:{
+        type:Datatypes.INTEGER,
+        primaryKey: true,
+    },
     name:{
         type:Datatypes.STRING,
         allowNull:false,
