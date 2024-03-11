@@ -7,15 +7,15 @@ const User=sequelize.define('users',{
         autoIncrement: true
     },
     username: {
-        type: DataTypes.STRING(50),
+        type: Datatypes.STRING(50),
         allowNull: false
     },
     password: {
-        type: DataTypes.STRING(100),
+        type: Datatypes.STRING(100),
         allowNull: false
     },
     role: {
-        type: DataTypes.ENUM('admin', 'telemarketer', 'agent', 'product_owner'),
+        type: Datatypes.ENUM('admin', 'telemarketer', 'agent', 'product_owner'),
         allowNull: false
     }
 });
@@ -23,5 +23,5 @@ const createUser=async ()=>{
     await User.sync({force:true})
     console.log('User table created')
 }
-createUser();
-module.exports=User
+
+module.exports={User,createUser}

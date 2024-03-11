@@ -28,5 +28,5 @@ const createProduct=async ()=>{
     await Product.sync({force:true})
     console.log('Products table created')
 }
-createProduct();
-module.exports=Product
+
+module.exports={Product,createProduct}

@@ -25,5 +25,5 @@ const createLeads=async ()=>{
     await Leads.sync({force:true})
     console.log('Leads table created')
 }
-createLeads();
-module.exports=Leads;
+
+module.exports={Leads,createLeads};
