@@ -27,10 +27,5 @@ const DynamicProperties=sequelize.define({
         }
     },
    
-});
-const createDynamicProperties=async ()=>{
-    await DynamicProperties.sync({force:true})
-    console.log('Dynamic Properties table created')
-}
-
-module.exports={DynamicProperties,createDynamicProperties}
+});   
+module.exports=DynamicProperties;

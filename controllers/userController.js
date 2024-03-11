@@ -1,5 +1,5 @@
-const{createUser,User}=require('../models/userModel')
-createUser();
+const User = require('../models/userModel')
+
 const getAsync= async(req,res)=>{
     try{
         const users=await User.findAll();

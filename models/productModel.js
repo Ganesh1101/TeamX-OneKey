@@ -24,9 +24,4 @@ const Product=sequelize.define({
         }
       }
 });
-const createProduct=async ()=>{
-    await Product.sync({force:true})
-    console.log('Products table created')
-}
-
-module.exports={Product,createProduct}
+module.exports=Product
