@@ -5,15 +5,13 @@ const port=3030;
 const app=express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const connect=async ()=>{
+
 try{
-    await sequelize.authenticate();
+    sequelize.authenticate();
     console.log('Connection established successfully...');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
-}
-connect();
 app.use ('/api/user',userRoutes);
 
 app.get('/',(req,res)=>{
